@@ -151,3 +151,18 @@ So the CRM can permanently remove customers from the database.
 
 ### Engineering Principle
 Delete operations + clean database state management.
+
+---
+
+## What is CRUD? (Simple Explanation)
+
+CRUD represents the four basic actions you can perform on data.
+
+Think of it like managing contacts in your phone:
+
+- **Create** → Add a new contact  
+- **Read** → View your contacts  
+- **Update** → Edit a contact’s name or number  
+- **Delete** → Remove a contact  
+
+In this lab, we implemented all four operations using MongoDB and Mongoose.
