@@ -74,7 +74,11 @@ async function runCRM() {
         }
 
         else if (choice === "4") {
-            console.log("Delete customer (coming next)");
+            const id = prompt("Enter customer ID to delete: ");
+
+            await Customer.findByIdAndDelete(id);
+
+            console.log("Customer deleted successfully.");
         } else if (choice === "5") {
             console.log("Exiting...");
             running = false;
