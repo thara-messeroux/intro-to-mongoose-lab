@@ -42,10 +42,38 @@ async function runCRM() {
 
             console.log("Customer created successfully.");
         } else if (choice === "2") {
-            console.log("View customers (coming next)");
+            const customers = await Customer.find({});
+
+            if (customers.length === 0) {
+                console.log("No customers found.");
+            } else {
+                console.log("\nCustomer List:\n");
+                customers.forEach((c) => {
+                    console.log(`ID: ${c._id} | Name: ${c.name} | Age: ${c.age}`);
+                });
+                console.log("");
+            }
         } else if (choice === "3") {
-            console.log("Update customer (coming next)");
-        } else if (choice === "4") {
+            const id = prompt("Enter customer ID to update: ").trim();
+
+            const newName = prompt("Enter new name (leave blank to keep current): ").trim();
+            const newAgeInput = prompt("Enter new age (leave blank to keep current): ").trim();
+
+            const updateData = {};
+
+            if (newName) updateData.name = newName;
+            if (newAgeInput) updateData.age = Number(newAgeInput);
+
+            const updatedCustomer = await Customer.findByIdAndUpdate(id, updateData, { new: true });
+
+            if (!updatedCustomer) {
+                console.log("Customer not found.");
+            } else {
+                console.log("Customer updated successfully.");
+            }
+        }
+
+        else if (choice === "4") {
             console.log("Delete customer (coming next)");
         } else if (choice === "5") {
             console.log("Exiting...");

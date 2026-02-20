@@ -120,3 +120,19 @@ This proves our app is truly saving data in the correct database.
 ### Engineering Principle
 Independent verification.
 Always confirm database writes using an external tool.
+
+---
+
+## Step 8 – Implement Update (CRUD)
+
+### What we did
+- Asked the user for a customer ID
+- Asked for a new name and/or new age
+- Used `findByIdAndUpdate()` to update the record
+
+### Why we did it
+So the CRM can edit existing customers instead of only creating new ones.
+
+### Engineering Principle
+Update operations + safe partial updates.
+Only change fields the user actually entered.
