@@ -87,3 +87,18 @@ This is the “user interface” of the terminal app. It lets a user drive CRUD 
 
 ### Engineering Principle
 Control flow loop + clean resource management (keep connection open, then close once).
+
+---
+
+## Step 6 – Implement Create (CRUD)
+
+### What we did
+- Prompted user for name and age
+- Used `Customer.create()` to insert into MongoDB
+- Converted age to Number before saving
+
+### Why we did it
+This allows real data to be stored permanently in the database.
+
+### Engineering Principle
+Data validation + proper type handling before persistence.

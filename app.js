@@ -32,7 +32,15 @@ async function runCRM() {
         const choice = prompt("Number of action to run: ");
 
         if (choice === "1") {
-            console.log("Create customer (coming next)");
+            const name = prompt("Enter customer name: ");
+            const age = prompt("Enter customer age: ");
+
+            await Customer.create({
+                name: name,
+                age: Number(age),
+            });
+
+            console.log("Customer created successfully.");
         } else if (choice === "2") {
             console.log("View customers (coming next)");
         } else if (choice === "3") {
