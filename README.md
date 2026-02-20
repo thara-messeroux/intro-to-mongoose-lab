@@ -102,3 +102,21 @@ This allows real data to be stored permanently in the database.
 
 ### Engineering Principle
 Data validation + proper type handling before persistence.
+
+---
+
+## Step 7 – Verify Data in MongoDB Compass
+
+### What we did
+- Opened MongoDB Compass
+- Connected to our Atlas cluster
+- Confirmed database name is `crm`
+- Opened `customers` collection
+- Saw the saved customer document
+
+### Why we did it
+This proves our app is truly saving data in the correct database.
+
+### Engineering Principle
+Independent verification.
+Always confirm database writes using an external tool.
