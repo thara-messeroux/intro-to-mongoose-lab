@@ -40,3 +40,19 @@ Applications need:
 
 ### Engineering Principle
 Dependency management and environment isolation.
+
+---
+
+## Step 3 – Connect to MongoDB (Atlas)
+
+### What we did
+- Added `MONGODB_URI` to `.env`
+- Used `dotenv` to load the URI safely
+- Connected to MongoDB with `mongoose.connect()`
+- Closed the connection with `mongoose.connection.close()`
+
+### Why we did it
+So our app can store real data in a real database instead of losing it when the app stops.
+
+### Engineering Principle
+Secure configuration + clean resource lifecycle (connect → use → close).

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/thara-messeroux/intro-to-mongoose-lab#readme",
   "dependencies": {
     "dotenv": "^17.3.1",
+    "mongodb": "^7.1.0",
     "mongoose": "^9.2.1",
     "prompt-sync": "^4.2.0"
   }

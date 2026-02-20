@@ -1,8 +1,17 @@
-// Import prompt-sync
-const prompt = require('prompt-sync')();
+require("dotenv").config();
+const mongoose = require("mongoose");
 
-// Ask user a question
-const username = prompt("What is your name? ");
+async function connectToDB() {
+    try {
+        await mongoose.connect(process.env.MONGODB_URI);
+        console.log("✅ Connected to MongoDB!");
 
-// Print result
-console.log(`Hello ${username}`);
+        await mongoose.connection.close();
+        console.log("✅ Connection closed. Done.");
+    } catch (err) {
+        console.log("❌ Connection failed.");
+        console.log(err.message);
+    }
+}
+
+connectToDB();
