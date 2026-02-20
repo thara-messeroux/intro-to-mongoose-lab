@@ -136,3 +136,18 @@ So the CRM can edit existing customers instead of only creating new ones.
 ### Engineering Principle
 Update operations + safe partial updates.
 Only change fields the user actually entered.
+
+---
+
+## Step 9 – Implement Delete (CRUD)
+
+### What we did
+- Asked user for a customer ID
+- Used `findByIdAndDelete()` to remove the customer
+- Confirmed deletion in the terminal
+
+### Why we did it
+So the CRM can permanently remove customers from the database.
+
+### Engineering Principle
+Delete operations + clean database state management.
