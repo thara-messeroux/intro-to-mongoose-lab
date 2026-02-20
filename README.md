@@ -166,3 +166,22 @@ Think of it like managing contacts in your phone:
 - **Delete** → Remove a contact  
 
 In this lab, we implemented all four operations using MongoDB and Mongoose.
+
+---
+
+## MongoDB vs Mongoose (Simple Explanation)
+
+Think of it like this:
+
+- **MongoDB** is the actual database.
+  It is where the data is stored.
+  (Like a big digital storage room.)
+
+- **Mongoose** is a helper tool for Node.js.
+  It helps our app talk to MongoDB.
+  (Like a translator between our JavaScript code and the database.)
+
+So:
+
+- MongoDB = where the data lives
+- Mongoose = how our app communicates with it
