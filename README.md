@@ -56,3 +56,18 @@ So our app can store real data in a real database instead of losing it when the 
 
 ### Engineering Principle
 Secure configuration + clean resource lifecycle (connect → use → close).
+
+---
+
+## Step 4 – Create Customer Model
+
+### What we did
+- Created `models/customer.js`
+- Defined a Customer schema with `name` and `age`
+- Exported the Customer model for use in `app.js`
+
+### Why we did it
+This gives MongoDB a clear “shape” for customer data so we can reliably create, read, update, and delete customers.
+
+### Engineering Principle
+Data modeling + separation of concerns (models live in their own folder).
