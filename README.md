@@ -71,3 +71,19 @@ This gives MongoDB a clear “shape” for customer data so we can reliably crea
 
 ### Engineering Principle
 Data modeling + separation of concerns (models live in their own folder).
+
+---
+
+## Step 5 – Build the Terminal CRM Menu Loop
+
+### What we did
+- Created a menu with 5 options (Create, View, Update, Delete, Quit)
+- Used a `while` loop so the menu repeats until the user quits
+- Kept database connection open during the session
+- Closed the database connection on exit
+
+### Why we did it
+This is the “user interface” of the terminal app. It lets a user drive CRUD actions step-by-step.
+
+### Engineering Principle
+Control flow loop + clean resource management (keep connection open, then close once).
